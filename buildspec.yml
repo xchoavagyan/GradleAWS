@@ -6,7 +6,7 @@ phases:
       java: coretto11
     build:
       commands:
-        - ./gradlew build
+        - ./gradlew bootJar
     post_build:
       commands:
         -echo Build completed
@@ -15,5 +15,4 @@ phases:
       - build/target/*.jar
       - scripts/*.sh
       - appspec.yml
-
-        discard-paths:yes
+    discard-paths: yes
