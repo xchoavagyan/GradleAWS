@@ -4,12 +4,16 @@ phases:
   install:
     runtime-versions:
       java: corretto11
-    build:
-      commands:
-        - ./gradlew buildJar
-    post_build:
-      commands:
-        -echo Build completed
+  build:
+    commands:
+      - ./gradlew bootJar
+  post_build:
+    commands:
+      - echo Build completed
 artifacts:
   files:
-    - build/target/*.jar
+    - build/libs/*.jar
+    - scripts/*.sh
+    - appspec.yml
+  #com/mycompany/app/HelloWorld.java, specifying yes will place this file in /HelloWorld.java
+  discard-paths: yes
