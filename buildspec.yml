@@ -6,7 +6,7 @@ phases:
       java: coretto11
     build:
       commands:
-        - ./gradlew bootJar
+        - ./gradlew build
     post_build:
       commands:
         -echo Build completed
