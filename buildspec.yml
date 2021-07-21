@@ -10,6 +10,6 @@ phases:
     post_build:
       commands:
         -echo Build completed
-  artifacts:
-    files:
-      - build/target/*.jar
+artifacts:
+  files:
+    - build/target/*.jar
